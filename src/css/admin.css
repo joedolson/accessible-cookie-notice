@@ -1,0 +1,83 @@
+.accessible-cookie-notice .metabox-holder .postbox > h2 {
+	font-size: 14px;
+	padding: 8px 12px;
+	margin: 0;
+	line-height: 1.4;
+}
+
+.accessible-cookie-notice .postbox {
+	margin: 10px 10px 0 0
+}
+
+.accessible-cookie-notice .postbox .inside {
+	overflow: visible !important
+}
+
+/* some plugins change this, but I need it at WP default. */
+.accessible-cookie-notice .meta-box-sortables {
+	min-height: 0
+}
+
+.jcd-wide {
+	width: 75%;
+}
+
+.jcd-narrow {
+	width: 20%;
+}
+
+.accessible-cookie-notice label {
+	display: block;
+}
+
+.accessible-cookie-notice .checkboxes li {
+	display: inline-block;
+	padding: 5px;
+	background: rgba(0, 0, 0, .05);
+	margin: 2px;
+}
+
+.accessible-cookie-notice .checkboxes li:hover {
+	background: #fff;
+}
+
+.accessible-cookie-notice .checkboxes {
+	margin: 0;
+}
+
+.accessible-cookie-notice .checkboxes:after {
+	content: '';
+	display: table;
+	clear: both;
+	margin-bottom: 1em;
+}
+
+.accessible-cookie-notice .wp-picker-container label,
+.accessible-cookie-notice .checkboxes label {
+	display: inline;
+}
+
+.accessible-cookie-notice .inside.cookies li {
+	word-wrap: anywhere;
+}
+
+.accessible-cookie-notice .inside.legal ul {
+	padding: 0 1em;
+	list-style-type: inherit;
+}
+
+.accessible-cookie-notice .inside.legal ul ul {
+	padding: 0 0 0 2em;
+	list-style-type: inherit;
+}
+
+
+@media (max-width: 782px) {
+	.jcd-narrow {
+		width: 100%;
+	}
+
+	.jcd-wide {
+		width: 100%;
+	}
+}

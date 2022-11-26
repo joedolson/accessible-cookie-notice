@@ -1,0 +1,333 @@
+#acn {
+	width: 100%;
+	height: auto;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	font-weight: normal;
+	font-family: -apple-system,BlinkMacSystemFont,Arial,Roboto,"Helvetica Neue",sans-serif;
+	background-color: var(--acn-banner);
+	color: var(--acn-text);
+	padding: 0;
+}
+
+#acn.cn-position-top {
+	border-bottom: 2px solid var(--acn-highlight);
+}
+
+#acn.cn-position-bottom {
+	border-top: 2px solid var(--acn-highlight);
+}
+
+#acn,
+#acn * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#acn.cn-animated {
+	-webkit-animation-duration: 0.5s !important;
+	animation-duration: 0.5s !important;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+#acn.cn-animated.cn-effect-none {
+	-webkit-animation-duration: 0.001s !important;
+	animation-duration: 0.001s !important;
+}
+
+#acn .cookie-revoke-container,
+#acn .cookie-notice-container {
+	display: grid;
+	grid-template-columns: 60% 1fr;
+	align-items: center;
+	column-gap: 20px;
+}
+
+#acn.cookie-notice-hidden .cookie-notice-container,
+#acn.cookie-revoke-hidden .cookie-revoke-container {
+	visibility: hidden;
+	position: absolute;
+}
+
+.cn-position-bottom {
+	position: fixed;
+	bottom: 0;
+	z-index: 100000;
+}
+
+.cookie-revoke-container,
+.cookie-notice-container {
+	padding: 15px 30px;
+	width: calc( 100% - 20vw );
+	margin: 0 auto;
+	z-index: 2;
+}
+
+#acn-revoke-buttons,
+#acn-buttons {
+	justify-self: end;
+}
+
+@media screen and (max-width:960px) {
+	.cookie-revoke-container,
+	.cookie-notice-container {
+		width: calc( 100% - 60px );
+	}
+}
+
+#acn button {
+	margin: 0 0 0 5px;
+}
+
+#acn button {
+	font-family: -apple-system,BlinkMacSystemFont,Arial,Roboto,"Helvetica Neue",sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	text-align: center;
+	text-transform: none;
+	display: inline-block;
+	cursor: pointer;
+	touch-action: manipulation;
+	white-space: nowrap;
+	outline: none;
+	box-shadow: none;
+	text-shadow: none;
+	border-radius: 0;
+	text-decoration: none;
+	font-weight: 700;
+	padding: 8.5px 10px !important;
+	background: var(--acn-highlight-alt);
+	color: var(--acn-highlight-inverse);
+	border: 2px solid var(--acn-highlight);
+}
+
+#acn button:hover,
+#acn button:focus {
+	outline: 2px solid var(--acn-text);
+	outline-offset: 2px;
+	text-decoration: underline;
+}
+
+#acn p {
+	margin: 0;
+}
+
+.acn-text,
+.acn-buttons {
+	display: inline-block;
+}
+
+#acn.cookie-notice-visible.cn-effect-none,
+#acn.cookie-revoke-visible.cn-effect-none {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+#acn.cn-effect-none {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+#acn.cookie-notice-visible.cn-effect-fade,
+#acn.cookie-revoke-visible.cn-effect-fade {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+#acn.cn-effect-fade {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+#acn.cookie-notice-visible.cn-effect-slide,
+#acn.cookie-revoke-visible.cn-effect-slide{
+	-webkit-animation-name: slideInUp;
+	animation-name: slideInUp;
+}
+
+#acn.cn-effect-slide {
+	-webkit-animation-name: slideOutDown;
+	animation-name: slideOutDown;
+}
+
+#acn.cookie-notice-visible.cn-position-top.cn-effect-slide,
+#acn.cookie-revoke-visible.cn-position-top.cn-effect-slide {
+	-webkit-animation-name: slideInDown;
+	animation-name: slideInDown;
+}
+
+#acn.cn-position-top.cn-effect-slide {
+	-webkit-animation-name: slideOutUp;
+	animation-name: slideOutUp;
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes slideInUp {
+	from {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes slideInUp {
+	from {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@-webkit-keyframes slideOutDown {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		visibility: hidden;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+}
+
+@keyframes slideOutDown {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		visibility: hidden;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+}
+
+@-webkit-keyframes slideInDown {
+	from {
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes slideInDown {
+	from {
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@-webkit-keyframes slideOutUp {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		visibility: hidden;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+
+@keyframes slideOutUp {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		visibility: hidden;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.cookie-revoke-container #acn-revoke,
+	.cookie-notice-container #acn-text {
+		display: block;
+	}
+	.cookie-revoke-container #acn-revoke-buttons,
+	.cookie-notice-container #acn-buttons {
+		display: block;
+		text-align: center;
+		padding: .5em 0;
+	}
+	#acn button {
+		margin: 0 5px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.cookie-notice-container,
+	.cookie-revoke-container {
+		padding: 15px 25px;
+	}
+}
